@@ -2,8 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap');
 
-
-
+@media only screen and (max-width: 600px) {
+    main {
+        flex-wrap: wrap;
+    }
+    main article{
+        text-align: left;
+    }
+  }
+@media only screen and (min-width:601px) {
+    main {
+      flex-wrap: nowrap;
+  }
+    main article{
+        text-align: right;
+    }
+}
 :root{
     --cor0: #56F5D6;
     --cor1: #43A895;
@@ -17,16 +31,12 @@
     --font-android: 'Roboto Mono', monospace;
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
 
-}
 
 body {
     background-color: var(--cor4);
     font-family: var(--font-padrao);
-    padding: 0px 35px;
+    padding: 0px 30px;
     
 }
 
@@ -37,7 +47,7 @@ header {
     font-family: var(--font-android);
     max-width: 1200px;
     margin: auto;
-    padding: 25px;
+    padding: 20px;
     display: flex;
     align-items: flex-end;
     
@@ -78,16 +88,18 @@ main {
     margin-bottom: 15px;
     box-shadow: 0px 0px 5px black;
     display: flex;
-    flex-wrap: nowrap;
+    
 }
 main img {
     width: 50%;
     max-width: 400px;
+    min-width: 150px;
     align-self: flex-start;
+    
 }
 main article{
     flex: 1 1 auto;
-    text-align: right;
+    max-width: 800px;
 }
 main p {
     /* top, right, bot, left */
